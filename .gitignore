@@ -2,6 +2,7 @@ mainwindowMB/build-mainwindowMB-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 ROT/build-ROT-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 template/build-template-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 thread/build-MULTITHREAD-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
+messageBox/build-messageBox-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 *.o
 *.exe
 moc*.*
