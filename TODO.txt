@@ -1,7 +1,7 @@
 1) THREADS // semaphore				OK
 2) Operator overload				OK
 3) template					OK
-4) (maze generator)	<-----			
+4) graph					OK			
 5) qmainwindow menubar				OK
 6) qmessagebox					OK
 7) container (vector list stack queue)		
