@@ -7,4 +7,4 @@
 7) container (vector list stack queue)		
 8) sort alg.					
 9) rule of three				OK
-10) 
+10) dist					OK
