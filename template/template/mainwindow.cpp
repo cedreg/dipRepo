@@ -36,12 +36,14 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent)
     ///TEST OB gleich/ungleich funktioniert
     qDebug() << "i1 == i2:" << ((i1 == i2) ? "ist gleich" : "ist ungleich");
 
-    ///TEST OB Assignment operator Funktioniert
+    ///TEST OB Assignment operator funktioniert
     i1 = i2;
     qDebug() << "i1 = i2 \ni1 == i2:" << (i1 == i2);
 
-    ///TEST OB ^= (HIER ALS pow(container<INT/DOUBLE>, y) implementiert
+    ///TEST OB ^= funktioniert (squared)
+    ///i1 ist hier druch zuweisung auf zeile 40 -> 5 = resultat muesste pow(5, 2) -> 25 sein
     i1 ^= 2;
+    qDebug() << i1.getValue();
 
 }
 

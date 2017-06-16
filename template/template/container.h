@@ -58,7 +58,8 @@ public:
     //custom Operator ^=
     container<T> operator^= (T power)
     {
-        return testRec(value, power);
+        value = testRec(value, power);
+        return *this;
     }
 
     T testRec(T base, T exp)
