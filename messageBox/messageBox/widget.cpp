@@ -2,12 +2,14 @@
 
 #include <QPushButton>
 #include <QMessageBox>
-#include <QDialogButtonBox>
+#include <QInputDialog>
 #include <QVBoxLayout>
+#include <QDebug>
 
 Widget::Widget(QWidget *parent) : QWidget(parent)
 {
-
+    this->setMinimumSize(200,200);
+    this->setWindowTitle("MessageBoxes");
 
     infoB = new QPushButton("INFO");
     warningB = new QPushButton("WARNING");
@@ -29,11 +31,11 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     testMBOX = true;
 
     /// M4
-    QDialogButtonBox* mDialogQuestion = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-
-
-
-
+    /*  QInputDialog* mDialogQuestion = new QInputDialog();
+     *  Kann als klassenVariabel definiert werden und in dem SLOT queryQuestion
+     *  anstatt "text = QInputDialog::getText" über die Variabel "mDialogQuestion->getText"
+     *  genutzt werden.
+     */
 
     QVBoxLayout* vbox = new QVBoxLayout();
 
@@ -47,7 +49,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     connect(infoB, SIGNAL(clicked(bool)), mBoxInfo, SLOT(show()));
     connect(warningB, SIGNAL(clicked(bool)), mBoxWarning, SLOT(show()));
     connect(errorB, SIGNAL(clicked(bool)), this, SLOT(MBOX()));
-    connect(questionB, SIGNAL(clicked(bool)), mDialogQuestion, SLOT(show()));
+    connect(questionB, SIGNAL(clicked(bool)), this, SLOT(queryQuestion()));
 }
 
 Widget::~Widget()
@@ -62,5 +64,23 @@ void Widget::MBOX()
     {
         QMessageBox mBoxError(QMessageBox::Critical, "ERROR", "Linux ist abgestürzt", QMessageBox::StandardButton::Close);
         mBoxError.exec();
+    }
+}
+
+void Widget::queryQuestion()
+{
+    bool ok = false;
+    QString text;
+
+
+    text = QInputDialog::getText(0, "QUESTION", "Bitte Namen eingeben:", QLineEdit::Normal, text, &ok );
+    if(ok)
+    {
+        qDebug() << "Guten Tag" << text;
+        qDebug() << "user pressed ok\nDO SOMETHING WITH text-variable";
+    }
+    else
+    {
+        qDebug() << "user pressed cancel";
     }
 }

@@ -24,6 +24,7 @@ public:
 
 private slots:
     void MBOX();
+    void queryQuestion();
 };
 
 #endif // WIDGET_H
