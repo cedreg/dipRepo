@@ -9,7 +9,10 @@ myWidget::myWidget(int MAXROWS, QWidget *parent) : MR(MAXROWS), QWidget(parent)
 {
     this->setMinimumSize(800,600);
 
-    TW = new QTableWidget((MR < 1) ? 1 : MR, 2);
+    // check if MR is <= 1. IF SO assign 1 else assign MR
+    // important because of the for-loop after we create the tableWidget
+    MR <= 1 ? MR = 1 : MR = MR;
+    TW = new QTableWidget(MR, 2);
 
     // There are no items in cells until one sets them with QTableWidget::setItem() or after user has edited them.
     for(int i = 0; i < MR; i++)

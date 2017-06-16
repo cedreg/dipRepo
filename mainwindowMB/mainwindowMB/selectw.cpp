@@ -40,10 +40,16 @@ void selectW::createTABLE()
 
 void selectW::copyTable()
 {
-    emit mwCopyTable();
+    if(mw != nullptr)
+    {
+        emit mwCopyTable();
+    }
 }
 
 void selectW::resetTable()
 {
-    emit mwResetTable();
+    if(mw != nullptr)
+    {
+        emit mwResetTable();
+    }
 }
