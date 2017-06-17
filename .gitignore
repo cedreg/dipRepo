@@ -7,7 +7,11 @@ graph/build-graph-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 template2/build-template2-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 matrix/build-mat-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
 planetDist/build-planetDist-Desktop_Qt_5_8_0_MinGW_32bit-Debug/
+dipPruefung/aufgabe1/build-encoding-Desktop_Qt_5_7_0_GCC_64bit-Debug/
+dipPruefung/aufgabe2/build-binaryTree-Desktop_Qt_5_7_0_GCC_64bit-Debug/
+dipPruefung/aufgabe3/build-sortiersoftware-Desktop_Qt_5_7_0_GCC_64bit-Debug/
 *.o
 *.exe
 moc*.*
 *.zip
+*.html
